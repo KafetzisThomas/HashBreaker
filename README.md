@@ -1,4 +1,4 @@
-<div align="center">HashBreaker</div>
+<h1 align="center">HashBreaker</h1>
 
 **What is this?**  
 Allows you to crack hashes with or without wordlist.
