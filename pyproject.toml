@@ -1,0 +1,10 @@
+[project]
+name = "hashbreaker"
+version = "0.1.0"
+description = "Allows you to crack hashes with or without wordlist."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcrypt>=4.0.1",
+    "colorama==0.4.6",
+]

@@ -21,7 +21,7 @@ def crack_bcrypt_hash(
                 password_length, custom_charset, with_custom_charset
             ):
                 total_attempts += 1
-                print(f"[*] {hash_str}: {guess}")
+                print(f"{hash_str}: {guess}")
                 # Check if the generated password matches the hash
                 if bcrypt.checkpw(guess.encode("utf-8"), hash_str.encode("utf-8")):
                     return guess, total_attempts
@@ -34,7 +34,7 @@ def crack_bcrypt_hash(
             with open(wordlist, "r") as file:
                 for line in file.readlines():
                     total_attempts += 1
-                    print(f"[*] {hash_str}: {guess}")
+                    print(f"{hash_str}: {guess}")
                     if bcrypt.checkpw(
                         line.strip().encode("utf-8"), hash_str.encode("utf-8")
                     ):
@@ -42,6 +42,6 @@ def crack_bcrypt_hash(
                         return line.strip(), total_attempts
 
             if not wordlist_found:
-                print(f"[*] No matching password found in {wordlist}")
+                print(f"No matching password found in {wordlist}")
         except FileNotFoundError:
-            print(f"[*] Wordlist file not found: {wordlist}")
+            print(f"Wordlist file not found: {wordlist}")

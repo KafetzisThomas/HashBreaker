@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
-# Project Title: Hash-Breaker (https://github.com/KafetzisThomas/Hash-Breaker)
+# Project Title: HashBreaker (https://github.com/KafetzisThomas/HashBreaker)
 # Author / Project Owner: KafetzisThomas (https://github.com/KafetzisThomas)
 # License: GPLv3
 # NOTE: By contributing to this project, you agree to the terms of the GPLv3 license, and agree to grant the project owner the right to also provide or sell this software, including your contribution, to anyone under any other license, with no compensation to you.
@@ -69,7 +69,7 @@ def commandline_args():
             )
             print(f"Time elapsed: {time_elapsed:.1f}s")
     else:
-        print(f"[*] Unsupported hash algorithm: {hash_algorithm}")
+        print(f"Unsupported hash algorithm: {hash_algorithm}")
 
 
 if __name__ == "__main__":
@@ -87,9 +87,9 @@ if __name__ == "__main__":
             commandline_args()
         except IndexError:
             print(
-                "[*] Usage: python3 main.py <hash_algo> '<hash_to_crack>' ['<wordlist_path>' --with-wordlist]"
+                "Usage: python3 main.py <hash_algo> '<hash_to_crack>' ['<wordlist_path>' --with-wordlist]"
             )
     else:
         print(
-            "[*] Usage: python3 main.py <hash_algo> '<hash_to_crack>' ['<wordlist_path>' --with-wordlist]"
+            "Usage: python3 main.py <hash_algo> '<hash_to_crack>' ['<wordlist_path>' --with-wordlist]"
         )

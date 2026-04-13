@@ -24,7 +24,7 @@ def crack_sha_hash(
                 password_length, custom_charset, with_custom_charset
             ):
                 total_attempts += 1
-                print(f"[*] {hash_str}: {guess}")
+                print(f"{hash_str}: {guess}")
                 if hash_func(guess.encode("utf-8")).hexdigest() == hash_str:
                     return guess, total_attempts
             password_length += 1  # If no match is found, increase the password length
@@ -35,11 +35,11 @@ def crack_sha_hash(
             with open(wordlist, "r") as file:
                 for line in file.readlines():
                     total_attempts += 1
-                    print(f"[*] {hash_str}: {guess}")
+                    print(f"{hash_str}: {guess}")
                     if hash_func(line.strip().encode("utf-8")).hexdigest() == hash_str:
                         wordlist_found = True
                         return line.strip(), total_attempts
             if not wordlist_found:
-                print(f"[*] No matching password found in {wordlist}")
+                print(f"No matching password found in {wordlist}")
         except FileNotFoundError:
-            print(f"[*] Wordlist file not found: {wordlist}")
+            print(f"Wordlist file not found: {wordlist}")
