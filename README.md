@@ -15,7 +15,7 @@ Allows you to crack hashes with or without wordlist.
 ## Usage
 
 ```bash
-Usage: uv run main.py <hash_algo> '<hash_to_crack>' ['<wordlist_path>' --wordlist]
+Usage: uv run python main.py <hash_algo> <hash> [wordlist --wordlist] [charset --charset]
 ```
 
 ## Examples
@@ -90,7 +90,7 @@ uv run main.py md5 'example-hash' 'invalid_wordlist.txt' --wordlist
 ## Run Tests
 
 ```bash
-uv run -m unittest discover tests
+uv run -m unittest tests/test_crackers.py
 ```
 
 ## Disclaimer
